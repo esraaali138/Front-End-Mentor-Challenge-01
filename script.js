@@ -1,0 +1,34 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const markAllNotifications = document.querySelector(".mark");
+  const notificationDiv = document.querySelectorAll(".notification");
+  const notificationNumber = document.querySelector(".notificationNumber");
+
+  function countNotifications() {
+    const unread = document.querySelectorAll(".redPoint").length;
+    notificationNumber.textContent = unread;
+  }
+
+  function notificationRead(notification) {
+    const redPoint = notification.querySelector(".redPoint"); //div has class redPoint
+    if (redPoint) redPoint.remove();
+    const post = notification.querySelector(".post");
+    if (post) post.style.color = "hsl(219, 14%, 50%)";
+    notification.style.backgroundColor = "";
+    countNotifications();
+  }
+
+  notificationDiv.forEach((notification) => {
+    notification.addEventListener("click", () =>
+      notificationRead(notification)
+    );
+  });
+
+  markAllNotifications.addEventListener("click", () => {
+    notificationDiv.forEach((notification) => notificationRead(notification));
+  });
+  countNotifications();
+});
+
+
+
+

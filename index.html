@@ -1,16 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Notifications page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
 
-</head>
-<body>
+    <title>Frontend Mentor | Notifications page</title>
+  </head>
+  <body style="background: hsl(210, 60%, 98%)" class="flex justify-center">
+    <div
+      style="background: hsl(0, 0%, 100%); width: 680px"
+      class="shadow-md h-auto py-3 mt-10 rounded-xl"
+    >
+      <div
+        style="width: 650px"
+        class="flex justify-between items-center mx-4 p-4"
+      >
+        <div class="flex gap-3 items-center">
+          <h3 class="font-bold text-lg">Notifications</h3>
+          <h1
+            style="background: hsl(219, 85%, 26%)"
+            class="notificationNumber text-white px-3 text-md rounded"
+          ></h1>
+        </div>
+        <h3
+          style="color: hsl(219, 84%, 25%)"
+          class="mark font-medium opacity-95 cursor-pointer"
+        >
+          Mark all as read
+        </h3>
+      </div>
+      <!-- Notifications -->
 
+      <div class="flex flex-col items-center">
+        <div
+          style="background: hsl(210, 60%, 98%); width: 620px"
+          class="notification flex justify-center gap-3 mt-2 py-3 rounded-lg cursor-pointer"
+        >
+          <div>
+            <img
+              src="./assets/images/avatar-mark-webber.webp"
+              width="50px"
+              alt=""
+            />
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-2">
+              <span class="font-bold">Mark Webber</span>
+              <span
+                class="font-medium opacity-70"
+                style="color: hsl(219, 12%, 42%)"
+                >reacted to your recent post</span
+              >
+              <span class="post font-bold" style="color: hsl(219, 84%, 25%)">
+                My first tournament today!</span
+              >
+              <div
+                style="background: hsl(1, 90%, 64%)"
+                class="redPoint w-2 h-2 rounded"
+              ></div>
+            </div>
+            <p style="color: hsl(219, 14%, 63%)">1m ago</p>
+          </div>
+        </div>
+        <!--  -->
+        <div
+          style="background: hsl(210, 60%, 98%); width: 620px"
+          class="notification flex px-3 gap-3 mt-2 py-3 rounded-lg cursor-pointer"
+        >
+          <div>
+            <img
+              src="./assets/images/avatar-angela-gray.webp"
+              width="50px"
+              alt=""
+            />
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1">
+              <span class="post font-bold" style="color: hsl(219, 84%, 25%)"
+                >Angela Gray</span
+              >
+              <span
+                class="font-medium opacity-70"
+                style="color: hsl(219, 12%, 42%)"
+                >followed you</span
+              >
+              <div
+                style="background: hsl(1, 90%, 64%)"
+                class="redPoint w-2 h-2 rounded"
+              ></div>
+            </div>
+            <p style="color: hsl(219, 14%, 63%)">5m</p>
+          </div>
+        </div>
+        <!--  -->
+        <div
+          style="background: hsl(210, 60%, 98%); width: 620px"
+          class="notification flex px-3 gap-3 mt-2 py-3 rounded-lg cursor-pointer"
+        >
+          <div>
+            <img
+              src="./assets/images/avatar-jacob-thompson.webp"
+              width="50px"
+              alt=""
+            />
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1">
+              <span class="font-bold">Jacob Thompson</span>
+              <span
+                class="font-medium opacity-70"
+                style="color: hsl(219, 12%, 42%)"
+                >has joined your group</span
+              >
+              <span class="post font-bold" style="color: hsl(219, 84%, 25%)"
+                >Chess Club</span
+              >
+              <div
+                style="background: hsl(1, 90%, 64%)"
+                class="redPoint w-2 h-2 rounded"
+              ></div>
+            </div>
+            <p style="color: hsl(219, 14%, 63%)">1 day ago</p>
+          </div>
+        </div>
+        <!-- /////// -->
 
-</body>
+        <div
+          style="background: hsl(210, 60%, 98%); width: 620px"
+          class="notification flex px-3 gap-3 mt-2 py-3 rounded-lg cursor-pointer"
+        >
+          <div>
+            <img
+              src="./assets/images/avatar-rizky-hasanuddin.webp"
+              width="50px"
+              alt=""
+            />
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1">
+              <span class="font-bold">Rizky Hasanuddin</span>
+              <span
+                class="font-medium opacity-70"
+                style="color: hsl(219, 12%, 42%)"
+                >sent you a private message</span
+              >
+              <div
+                style="background: hsl(1, 90%, 64%)"
+                class="redPoint w-2 h-2 rounded"
+              ></div>
+            </div>
+            <p style="color: hsl(219, 14%, 63%)">5 days ago</p>
+            <div
+              style="
+                width: 500px;
+                background: hsl(211, 68%, 94%);
+                color: hsl(219, 12%, 42%);
+              "
+              class="p-4 font-semibold opanotification city-90 rounded mt-2"
+            >
+              Hello, thanks for setting up the Chess club. i've been a member
+              for a few weeks now and iam ready having lots of fun and improving
+              my game
+            </div>
+          </div>
+        </div>
+        <!-- //////// -->
+
+        <div
+          style="background: hsl(210, 60%, 98%); width: 620px"
+          class="notification flex px-3 gap-3 mt-2 py-3 rounded-lg cursor-pointer"
+        >
+          <div class="flex justify-between w-full">
+            <div>
+              <img
+                src="./assets/images/avatar-kimberly-smith.webp"
+                width="50px"
+                alt=""
+              />
+            </div>
+            <div class="flex flex-col flex-grow px-3">
+              <div class="flex items-center gap-1">
+                <span class="font-bold">Kimberly Smith </span>
+                <span
+                  class="font-medium opacity-70"
+                  style="color: hsl(219, 12%, 42%)"
+                  >commented on your picture</span
+                >
+                <div
+                  style="background: hsl(1, 90%, 64%)"
+                  class="redPoint w-2 h-2 rounded"
+                ></div>
+              </div>
+              <p style="color: hsl(219, 14%, 63%)">2 weeks ago</p>
+            </div>
+
+            <div>
+              <img src="./assets/images/image-chess.webp" alt="" width="50px" />
+            </div>
+          </div>
+        </div>
+        <!-- ////////////// -->
+
+        <div
+          style="background: hsl(210, 60%, 98%); width: 620px"
+          class="notification flex px-3 gap-3 mt-2 py-3 rounded-lg cursor-pointer"
+        >
+          <div>
+            <img
+              src="./assets/images/avatar-nathan-peterson.webp"
+              width="70px"
+              alt=""
+            />
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center ">
+              <div >
+                <div>
+                  <span class="font-bold"> Nathan Peterson</span>
+                  <span
+                    class="font-medium opacity-70"
+                    style="color: hsl(219, 12%, 42%)"
+                    >reacted to your recent post</span
+                  >
+                  <span class="post font-bold" style="color: hsl(219, 84%, 25%)"
+                    >5 end-game strategies to increase your win rate
+                    <span
+                      style="background: hsl(1, 90%, 64%)"
+                      class="redPoint w-2 h-2 inline-block rounded"
+                    ></span
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <p style="color: hsl(219, 14%, 63%)">5 days ago</p>
+          </div>
+        </div>
+        <!-- ////// -->
+        <div
+          style="background: hsl(210, 60%, 98%); width: 620px"
+          class="notification flex px-3 gap-3 mt-2 py-3 rounded-lg cursor-pointer"
+        >
+          <div>
+            <img
+              src="./assets/images/avatar-anna-kim.webp"
+              width="50px"
+              alt=""
+            />
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1">
+              <span class="font-bold">Anaa kim</span>
+              <span
+                class="font-medium opacity-70"
+                style="color: hsl(219, 12%, 42%)"
+                >left the group</span
+              >
+              <span class="post font-bold" style="color: hsl(219, 84%, 25%)"
+                >Chess Club</span
+              >
+              <div
+                style="background: hsl(1, 90%, 64%)"
+                class="redPoint w-2 h-2 rounded"
+              ></div>
+            </div>
+            <p style="color: hsl(219, 14%, 63%)">2 weeks ago</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
