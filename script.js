@@ -4,8 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const notificationNumber = document.querySelector(".notificationNumber");
 
   function countNotifications() {
-    const unread = document.querySelectorAll(".redPoint").length;
-    notificationNumber.textContent = unread;
+    const unread = document.querySelectorAll(".redPoint");
+    notificationNumber.textContent = unread.length;
+    if (unread.length <= 0) {
+      notificationNumber.remove();
+      const notificationText = document.querySelector(".text");
+      notificationText.textContent = "All notifications are read ";
+      markAllNotifications.remove();
+    }
   }
 
   function notificationRead(notification) {
@@ -28,7 +34,3 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   countNotifications();
 });
-
-
-
-
