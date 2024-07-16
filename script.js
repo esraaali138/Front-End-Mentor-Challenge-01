@@ -19,6 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (redPoint) redPoint.remove();
     const post = notification.querySelector(".post");
     if (post) post.style.color = "hsl(219, 14%, 50%)";
+    if(notification.classList.contains('chat')) {
+      const textChat = document.querySelector(".textChat") 
+      textChat.style.backgroundColor = ""
+      textChat.style.border = "1px solid hsl(216, 4%, 73%)"
+    }
     notification.style.backgroundColor = "";
     countNotifications();
   }
